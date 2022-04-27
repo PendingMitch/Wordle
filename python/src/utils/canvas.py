@@ -1,7 +1,8 @@
 from . import config as config
+import os
 
 def printCanvas():
-    print()
+    clearConsole()
     for x in config.previous_guesses:
         for y in x:
             print('[' + y + '] ', end="")
@@ -13,3 +14,11 @@ def printCanvas():
             else: print('[ ]', end=" ")
 
         print()
+    print()
+
+
+def clearConsole():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+        command = 'cls'
+    os.system(command)

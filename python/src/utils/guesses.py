@@ -1,4 +1,4 @@
-from .canvas import printCanvas
+from .canvas import printCanvas, clearConsole
 from . import config
 
 def add_guess(word: str):
@@ -14,8 +14,7 @@ def add_guess(word: str):
             config.correct_letters[x[0]] = x[1]
 
     printCanvas()
-
-    if isWon(): print("You got the word, congratulations.")
+    if isWon(): print("You got the word, congratulations. The word was " + config.current_word.capitalize())
     elif len(config.previous_guesses) >= config.amount_of_guesses: print("Game Over The Word Was: " + config.current_word.capitalize())
     else: getGuess()
 

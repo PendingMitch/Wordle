@@ -1,5 +1,4 @@
 def init():
-    print("here")
     global current_word
     current_word = ""
     global completed

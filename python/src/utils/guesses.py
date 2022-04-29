@@ -35,7 +35,7 @@ def isWon():
     logging.info(f'Game Won with word: {config.current_word}')
     return True
 
-def correctInput(word: str, currentWord: str):
+def correctInput(word: str = "", currentWord: str = config.current_word):
     if len(word) != len(currentWord): 
         logging.error(f'Input {word} was illegal.')
         return False

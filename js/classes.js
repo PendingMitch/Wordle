@@ -26,7 +26,7 @@ class wordRow {
     }
 
     setLetter(letter = "", id) {
-        this.letter[id].setDisplay(letter, id)
+        this.letters[id].setDisplay(letter, id)
     }
 }
 
